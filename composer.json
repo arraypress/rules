@@ -1,0 +1,42 @@
+{
+  "name": "arraypress/rules",
+  "description": "A comprehensive collection of conditional rules.",
+  "type": "library",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://github.com/arraypress/rules/",
+  "authors": [
+    {
+      "name": "David Sherlock",
+      "homepage": "https://arraypress.com/"
+    }
+  ],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "arraypress/wp-utils": "dev-master",
+    "arraypress/edd-utils": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "ArrayPress\\Rules\\": "src/"
+    },
+    "files": [
+      "src/Aliases.php"
+    ]
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "support": {
+    "issues": "https://github.com/arraypress/rules/issues",
+    "source": "https://github.com/arraypress/rules"
+  },
+  "keywords": [
+    "wordpress",
+    "utilities",
+    "plugin-development",
+    "helper-classes"
+  ]
+}
