@@ -63,7 +63,7 @@ class_alias( '\ArrayPress\Rules\Post\Search\Posts', '\ArrayPress\Rules\Posts' );
 class_alias( '\ArrayPress\Rules\Post\Taxonomy\Category', '\ArrayPress\Rules\PostCategory' );
 class_alias( '\ArrayPress\Rules\Post\Taxonomy\Categories', '\ArrayPress\Rules\PostCategories' );
 class_alias( '\ArrayPress\Rules\Post\Taxonomy\Tag', '\ArrayPress\Rules\PostTag' );
-class_alias( '\ArrayPress\Rules\Post\Taxonomy\Tags', '\ArrayPress\Rules\PostCategories' );
+class_alias( '\ArrayPress\Rules\Post\Taxonomy\Tags', '\ArrayPress\Rules\PostTags' );
 
 // Page Search
 class_alias( '\ArrayPress\Rules\Page\Search\Page', '\ArrayPress\Rules\Page' );
