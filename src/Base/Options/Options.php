@@ -144,16 +144,26 @@ abstract class Options extends Rule {
 			return $pre_check;
 		}
 
-		$items = $this->get_compare_value( $args );
+		// Format input value
 		$input = $this->format_input_value( $value, $args );
-
-		// Use array_multi if both sides can have multiple values
-		if ( $this->multiple ) {
-			return Compare::array_multi( $operator, $input, $items, $this->case_sensitive, $this->strip_spaces );
+		if ( ! is_array( $input ) ) {
+			$input = [ $input ];
 		}
 
-		// Default to regular array comparison
-		return Compare::array( $operator, $input, $items, $this->case_sensitive, $this->strip_spaces );
+		// Get comparison value
+		$compare = $this->get_compare_value( $args );
+		if ( ! is_array( $compare ) ) {
+			$compare = [ $compare ];
+		}
+
+		// Always use array_multi as it handles both single and multiple values
+		return Compare::array_multi(
+			$operator,
+			$input,
+			$compare,
+			$this->case_sensitive,
+			$this->strip_spaces
+		);
 	}
 
 	/**

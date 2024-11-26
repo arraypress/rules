@@ -91,7 +91,7 @@ abstract class Search extends Options {
 	/**
 	 * Get the value to compare against the user input.
 	 */
-	protected function get_compare_value( array $args ): string {
+	protected function get_compare_value( array $args ) {
 		return strtoupper( $this->get_country( $args ) );
 	}
 
