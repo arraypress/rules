@@ -2,7 +2,7 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Commision\Field;
+namespace ArrayPress\Rules\EDD\Commission\Field;
 
 use ArrayPress\Rules\Base\Options\Options;
 use function esc_html__;
