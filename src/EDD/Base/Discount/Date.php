@@ -4,7 +4,7 @@ declare( strict_types=1 );
 
 namespace ArrayPress\Rules\EDD\Base\Discount;
 
-use ArrayPress\Rules\Base\Common\Date as BaseDate;
+use ArrayPress\Rules\Base\Date\Date as BaseDate;
 use function esc_html__;
 
 /**

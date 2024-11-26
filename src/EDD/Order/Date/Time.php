@@ -4,7 +4,7 @@ declare( strict_types=1 );
 
 namespace ArrayPress\Rules\EDD\Order\Date;
 
-use ArrayPress\Rules\Base\Common\Time as BaseTime;
+use ArrayPress\Rules\Base\Date\Time as BaseTime;
 use function esc_html__;
 use function function_exists;
 
