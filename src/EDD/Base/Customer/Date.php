@@ -58,4 +58,5 @@ abstract class Date extends BaseDate {
 	 * @return string The date value
 	 */
 	abstract protected function get_customer_date( EDD_Customer $customer ): string;
+
 }

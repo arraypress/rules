@@ -1,24 +1,24 @@
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Customer;
+namespace ArrayPress\Rules\EDD\Customer\Field;
 
 use ArrayPress\Rules\EDD\Base\Customer\Field;
 use function esc_html__;
 
 /**
- * Class Name
- * Handles customer name field comparison.
+ * Class Email
+ * Handles customer email field comparison.
  */
-class Name extends Field {
+class Email extends Field {
 
 	/**
 	 * The field to retrieve from the customer object
 	 *
 	 * @var string
 	 */
-	protected string $field_column = 'name';
+	protected string $field_column = 'email';
 
 	/**
 	 * Get the rule name.
@@ -26,7 +26,7 @@ class Name extends Field {
 	 * @return string
 	 */
 	public function get_label(): string {
-		return esc_html__('Customer Name', 'arraypress');
+		return esc_html__( 'Customer Email', 'arraypress' );
 	}
 
 	/**
@@ -35,7 +35,7 @@ class Name extends Field {
 	 * @return string
 	 */
 	public function get_description(): string {
-		return esc_html__('Compare against the customer\'s name', 'arraypress');
+		return esc_html__( 'Compare against the customer\'s email address', 'arraypress' );
 	}
 
 	/**
@@ -43,9 +43,8 @@ class Name extends Field {
 	 *
 	 * @return string
 	 */
-	public function get_field_name(): string {
-		return esc_html__( 'customer name', 'arraypress' );
+	protected function get_field_name(): string {
+		return esc_html__( 'customer email', 'arraypress' );
 	}
 
 }
-

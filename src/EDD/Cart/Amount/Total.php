@@ -2,14 +2,14 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Cart;
+namespace ArrayPress\Rules\EDD\Cart\Amount;
 
-use ArrayPress\Rules\Base\Numeric\Number;
+use ArrayPress\Rules\Base\Numeric\Decimal;
 
 /**
  * Cart total field rule class.
  */
-class Total extends Number {
+class Total extends Decimal {
 
 	/**
 	 * Get the name of the field.
@@ -60,12 +60,4 @@ class Total extends Number {
 		return edd_get_cart_total();
 	}
 
-	/**
-	 * Get minimum value for the field.
-	 *
-	 * @return float
-	 */
-	protected function get_min_value(): float {
-		return 0.0;
-	}
 }

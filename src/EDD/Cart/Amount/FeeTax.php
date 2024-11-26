@@ -2,14 +2,14 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Cart;
+namespace ArrayPress\Rules\EDD\Cart\Amount;
 
-use ArrayPress\Rules\Base\Numeric\Number;
+use ArrayPress\Rules\Base\Numeric\Decimal;
 
 /**
  * Cart fees tax field rule class.
  */
-class FeeTax extends Number {
+class FeeTax extends Decimal {
 
 	/**
 	 * Get the name of the field.
@@ -58,15 +58,6 @@ class FeeTax extends Number {
 	 */
 	protected function get_compare_value( array $args ): float {
 		return edd_get_cart_fee_tax();
-	}
-
-	/**
-	 * Get minimum value for the field.
-	 *
-	 * @return float
-	 */
-	protected function get_min_value(): float {
-		return 0.0;
 	}
 
 }

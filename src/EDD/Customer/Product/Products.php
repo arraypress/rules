@@ -2,7 +2,7 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Customer;
+namespace ArrayPress\Rules\EDD\Customer\Product;
 
 use function esc_html__;
 

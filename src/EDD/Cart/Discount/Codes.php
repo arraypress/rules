@@ -1,6 +1,6 @@
 <?php
 
-namespace ArrayPress\Rules\EDD\Cart;
+namespace ArrayPress\Rules\EDD\Cart\Discount;
 
 /**
  * Multiple discount selection support.

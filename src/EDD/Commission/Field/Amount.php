@@ -4,19 +4,12 @@ declare( strict_types=1 );
 
 namespace ArrayPress\Rules\EDD\Commission\Field;
 
-use ArrayPress\Rules\Base\Numeric\Number;
+use ArrayPress\Rules\Base\Numeric\Decimal;
 
 /**
  * Commission amount field rule class.
  */
-class Amount extends Number {
-
-	/**
-	 * Whether to only allow whole numbers.
-	 *
-	 * @var bool
-	 */
-	protected bool $whole_numbers = false;
+class Amount extends Decimal {
 
 	/**
 	 * Get the name of the field.
@@ -94,24 +87,6 @@ class Amount extends Number {
 		$commission = eddc_get_commission( $args['commission_id'] );
 
 		return $commission ? (float) $commission->amount : 0;
-	}
-
-	/**
-	 * Get minimum value for the field.
-	 *
-	 * @return float|int|null
-	 */
-	protected function get_min_value() {
-		return 0;
-	}
-
-	/**
-	 * Get step value for the field.
-	 *
-	 * @return float
-	 */
-	protected function get_step_value(): float {
-		return 0.01;
 	}
 
 }

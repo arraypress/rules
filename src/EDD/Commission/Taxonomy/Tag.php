@@ -4,7 +4,7 @@ declare( strict_types=1 );
 
 namespace ArrayPress\Rules\EDD\Commission\Taxonomy;
 
-use ArrayPress\Rules\EDD\Product\Tag as BaseTag;
+use ArrayPress\Rules\EDD\Product\Taxonomy\Tag as BaseTag;
 use function esc_html__;
 
 /**

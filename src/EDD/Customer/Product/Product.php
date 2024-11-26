@@ -2,7 +2,7 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Customer;
+namespace ArrayPress\Rules\EDD\Customer\Product;
 
 use ArrayPress\Rules\EDD\Product\Search\Product as BaseProduct;
 use ArrayPress\EDD\Customers\Customer;

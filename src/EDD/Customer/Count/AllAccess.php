@@ -2,7 +2,7 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Customer;
+namespace ArrayPress\Rules\EDD\Customer\Count;
 
 use ArrayPress\Rules\Base\Numeric\Number;
 use ArrayPress\EDD\Customers\Customer;
@@ -11,7 +11,7 @@ use function esc_html__;
 /**
  * Rule for checking EDD customer sales count.
  */
-class AllAccessCount extends Number {
+class AllAccess extends Number {
 
 	/**
 	 * Whether to only allow whole numbers

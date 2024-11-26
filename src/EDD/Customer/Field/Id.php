@@ -1,8 +1,8 @@
 <?php
 
-declare(strict_types=1);
+declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Customer;
+namespace ArrayPress\Rules\EDD\Customer\Field;
 
 use ArrayPress\Rules\Base\Numeric\Number;
 use function esc_html__;
@@ -25,7 +25,7 @@ class Id extends Number {
 	 * @return string
 	 */
 	public function get_label(): string {
-		return esc_html__('Customer ID', 'arraypress');
+		return esc_html__( 'Customer ID', 'arraypress' );
 	}
 
 	/**
@@ -34,7 +34,7 @@ class Id extends Number {
 	 * @return string
 	 */
 	public function get_option_group(): string {
-		return esc_html__('Customer', 'arraypress');
+		return esc_html__( 'Customer', 'arraypress' );
 	}
 
 	/**
@@ -43,7 +43,7 @@ class Id extends Number {
 	 * @return array
 	 */
 	public function get_required_args(): array {
-		return ['customer_id'];
+		return [ 'customer_id' ];
 	}
 
 	/**
@@ -52,7 +52,7 @@ class Id extends Number {
 	 * @return string
 	 */
 	protected function get_field_name(): string {
-		return esc_html__('customer ID', 'arraypress');
+		return esc_html__( 'customer ID', 'arraypress' );
 	}
 
 	/**
@@ -62,8 +62,8 @@ class Id extends Number {
 	 *
 	 * @return int
 	 */
-	protected function get_compare_value(array $args): int {
-		return (int)($args['customer_id'] ?? 0);
+	protected function get_compare_value( array $args ): int {
+		return (int) ( $args['customer_id'] ?? 0 );
 	}
 
 	/**

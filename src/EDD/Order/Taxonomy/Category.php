@@ -4,7 +4,7 @@ declare( strict_types=1 );
 
 namespace ArrayPress\Rules\EDD\Order\Taxonomy;
 
-use ArrayPress\Rules\EDD\Product\Category as BaseCategory;
+use ArrayPress\Rules\EDD\Product\Taxonomy\Category as BaseCategory;
 use ArrayPress\EDD\Orders\Order;
 use function esc_html__;
 

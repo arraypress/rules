@@ -2,14 +2,14 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Cart;
+namespace ArrayPress\Rules\EDD\Cart\Count;
 
-use ArrayPress\Rules\Base\Numeric\Number;
+use ArrayPress\Rules\Base\Numeric\Integer;
 
 /**
  * Cart item count field rule class.
  */
-class ItemCount extends Number {
+class Quantity extends Integer {
 
 	/**
 	 * Whether to only allow whole numbers.
@@ -53,7 +53,7 @@ class ItemCount extends Number {
 	 * @return bool
 	 */
 	public function validate( array $args ): bool {
-		return function_exists( 'EDD' );
+		return function_exists( 'edd_get_cart_quantity' );
 	}
 
 	/**
@@ -65,15 +65,6 @@ class ItemCount extends Number {
 	 */
 	protected function get_compare_value( array $args ): int {
 		return edd_get_cart_quantity();
-	}
-
-	/**
-	 * Get minimum value for the field.
-	 *
-	 * @return int
-	 */
-	protected function get_min_value(): int {
-		return 0;
 	}
 
 }

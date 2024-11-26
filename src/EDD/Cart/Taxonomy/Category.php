@@ -2,9 +2,9 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Cart;
+namespace ArrayPress\Rules\EDD\Cart\Taxonomy;
 
-use ArrayPress\Rules\EDD\Product\Category as BaseCategory;
+use ArrayPress\Rules\EDD\Product\Taxonomy\Category as BaseCategory;
 use ArrayPress\EDD\Cart\Cart;
 use function esc_html__;
 

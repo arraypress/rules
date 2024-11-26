@@ -2,7 +2,7 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Cart;
+namespace ArrayPress\Rules\EDD\Cart\Product;
 
 use ArrayPress\EDD\Cart\Cart;
 use ArrayPress\Rules\EDD\Product\Search\Product as BaseProduct;

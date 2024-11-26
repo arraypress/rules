@@ -2,7 +2,7 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Customer;
+namespace ArrayPress\Rules\EDD\Customer\Count;
 
 use ArrayPress\Rules\Base\Numeric\Number;
 use ArrayPress\EDD\Customers\Customer;
@@ -11,7 +11,8 @@ use function esc_html__;
 /**
  * Rule for checking EDD customer sales count.
  */
-class OrderCount extends Number {
+class Bundle extends Number {
+
 	/**
 	 * Whether to only allow whole numbers
 	 *
@@ -25,7 +26,7 @@ class OrderCount extends Number {
 	 * @return string
 	 */
 	public function get_label(): string {
-		return esc_html__( 'Customer Order Count', 'arraypress' );
+		return esc_html__( 'Customer Bundle Count', 'arraypress' );
 	}
 
 	/**
@@ -52,7 +53,7 @@ class OrderCount extends Number {
 	 * @return string
 	 */
 	protected function get_field_name(): string {
-		return esc_html__( 'number of sales', 'arraypress' );
+		return esc_html__( 'number of bundles', 'arraypress' );
 	}
 
 	/**
@@ -63,9 +64,7 @@ class OrderCount extends Number {
 	 * @return int
 	 */
 	protected function get_compare_value( array $args ): int {
-		$count       = Customer::get_purchase_count( $args['customer_id'] );
-
-		return (int) ( $count ?? 0 );
+		return Customer::get_bundle_count( $args['customer_id'] );
 	}
 
 	/**

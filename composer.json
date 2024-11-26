@@ -20,7 +20,16 @@
       "ArrayPress\\Rules\\": "src/"
     },
     "files": [
-      "src/Aliases.php"
+      "src/Aliases/Post.php",
+      "src/Aliases/Page.php",
+      "src/Aliases/User.php",
+      "src/Aliases/EDD/Cart.php",
+      "src/Aliases/EDD/Checkout.php",
+      "src/Aliases/EDD/Commission.php",
+      "src/Aliases/EDD/Customer.php",
+      "src/Aliases/EDD/Discount.php",
+      "src/Aliases/EDD/Order.php",
+      "src/Aliases/EDD/Product.php"
     ]
   },
   "config": {

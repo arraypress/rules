@@ -2,16 +2,16 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Customer;
+namespace ArrayPress\Rules\EDD\Customer\Taxonomy;
 
-use ArrayPress\Rules\EDD\Product\Tag as BaseTag;
+use ArrayPress\Rules\EDD\Product\Taxonomy\Category as BaseCategory;
 use ArrayPress\EDD\Customers\Customer;
 use function esc_html__;
 
 /**
  * Order Categories rule for checking categories in an order.
  */
-class Tag extends BaseTag {
+class Category extends BaseCategory {
 
 	/**
 	 * Get the rule label.
@@ -19,7 +19,7 @@ class Tag extends BaseTag {
 	 * @return string
 	 */
 	public function get_label(): string {
-		return esc_html__( 'Customer Tag', 'arraypress' );
+		return esc_html__( 'Customer Category', 'arraypress' );
 	}
 
 	/**
@@ -48,7 +48,7 @@ class Tag extends BaseTag {
 	 * @return array
 	 */
 	protected function get_compare_value( array $args ): array {
-		return Customer::get_term_ids( $args['customer_id'], $this->get_taxonomy() ) ?: [];
+		return Customer::get_term_ids( $args['customer_id'] ) ?: [];
 	}
 
 }
