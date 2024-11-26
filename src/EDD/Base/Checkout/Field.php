@@ -34,7 +34,7 @@ abstract class Field extends Text {
 	 * @return array
 	 */
 	public function get_required_args(): array {
-		return [];
+		return [ 'posted' ];
 	}
 
 	/**

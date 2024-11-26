@@ -10,6 +10,7 @@ use ArrayPress\Rules\Base\Numeric\Decimal;
  * Cart subtotal field rule class.
  */
 class Subtotal extends Decimal {
+
 	/**
 	 * Get the name of the field.
 	 *

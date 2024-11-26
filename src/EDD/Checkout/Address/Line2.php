@@ -16,7 +16,7 @@ class Line2 extends Field {
 	 *
 	 * @var string
 	 */
-	protected string $field_key = 'edd_line2';
+	protected string $field_key = 'card_address_2';
 
 	/**
 	 * Get the rule label.

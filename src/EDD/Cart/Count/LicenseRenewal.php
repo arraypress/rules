@@ -1,27 +1,37 @@
 <?php
+/**
+ * License renewal count rule class.
+ *
+ * This class handles validation and comparison of license renewal counts in the EDD cart.
+ *
+ * @package     ArrayPress\Rules\EDD\Cart\Count
+ * @since       1.0.0
+ * @author      David Sherlock
+ * @copyright   Copyright (c) 2024, ArrayPress Limited
+ * @license     GPL-2.0-or-later
+ */
 
 declare( strict_types=1 );
 
 namespace ArrayPress\Rules\EDD\Cart\Count;
 
 use ArrayPress\Rules\Base\Numeric\Integer;
+use ArrayPress\EDD\Cart\Cart;
 
-/**
- * Cart item count field rule class.
- */
-class Quantity extends Integer {
+
+class LicenseRenewal extends Integer {
 
 	/**
-	 * Get the name of the field.
+	 * Get the label of the field.
 	 *
 	 * @return string
 	 */
 	public function get_label(): string {
-		return esc_html__( 'Cart Item Count', 'arraypress' );
+		return esc_html__( 'License Renewals Count', 'arraypress' );
 	}
 
 	/**
-	 * Get the name of the field.
+	 * Get the option group name.
 	 *
 	 * @return string
 	 */
@@ -35,7 +45,7 @@ class Quantity extends Integer {
 	 * @return string
 	 */
 	protected function get_field_name(): string {
-		return esc_html__( 'item count', 'arraypress' );
+		return esc_html__( 'license renewal count', 'arraypress' );
 	}
 
 	/**
@@ -46,7 +56,7 @@ class Quantity extends Integer {
 	 * @return bool
 	 */
 	public function validate( array $args ): bool {
-		return function_exists( 'edd_get_cart_quantity' );
+		return class_exists( 'EDD_Software_Licensing' );
 	}
 
 	/**
@@ -57,7 +67,7 @@ class Quantity extends Integer {
 	 * @return int
 	 */
 	protected function get_compare_value( array $args ): int {
-		return edd_get_cart_quantity();
+		return Cart::get_license_renewal_count();
 	}
 
 }

@@ -34,7 +34,7 @@ class Country extends Search {
 	 * @return array
 	 */
 	public function get_required_args(): array {
-		return [];
+		return [ 'posted' ];
 	}
 
 	/**
@@ -56,8 +56,8 @@ class Country extends Search {
 	 * @return string The country value
 	 */
 	protected function get_country( array $args ): string {
-		if ( isset( $args['edd_country'] ) ) {
-			return $args['edd_country'];
+		if ( isset( $args['posted']['billing_country'] ) ) {
+			return $args['posted']['billing_country'];
 		}
 
 		// If field doesn't exist, return empty string

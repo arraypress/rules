@@ -2,15 +2,15 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Checkout\Address;
+namespace ArrayPress\Rules\EDD\Checkout\Gateway;
 
-use ArrayPress\Rules\EDD\Base\Region\Search;
+use ArrayPress\Rules\EDD\Base\Gateway\Search;
 use function function_exists;
 
 /**
  * Abstract base class for EDD country search rules.
  */
-class Region extends Search {
+class Gateway extends Search {
 
 	/**
 	 * Get the rule label.
@@ -18,7 +18,7 @@ class Region extends Search {
 	 * @return string
 	 */
 	public function get_label(): string {
-		return esc_html__( 'Checkout Address Region', 'arraypress' );
+		return esc_html__( 'Checkout Gateway', 'arraypress' );
 	}
 
 	/**
@@ -55,9 +55,9 @@ class Region extends Search {
 	 *
 	 * @return string The country value
 	 */
-	protected function get_region( array $args ): string {
-		if ( isset( $args['posted']['card_state'] ) ) {
-			return $args['posted']['card_state'];
+	protected function get_gateway( array $args ): string {
+		if ( isset( $args['posted']['edd-gateway'] ) ) {
+			return $args['posted']['edd-gateway'];
 		}
 
 		// If field doesn't exist, return empty string

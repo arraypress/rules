@@ -2,21 +2,21 @@
 
 declare( strict_types=1 );
 
-namespace ArrayPress\Rules\EDD\Checkout\Address;
+namespace ArrayPress\Rules\EDD\Checkout\Field;
 
 use ArrayPress\Rules\EDD\Base\Checkout\Field;
 
 /**
  * Class for checkout email field comparison.
  */
-class PostalCode extends Field {
+class LastName extends Field {
 
 	/**
 	 * The field key to retrieve from the posted checkout data
 	 *
 	 * @var string
 	 */
-	protected string $field_key = 'card_zip';
+	protected string $field_key = 'edd_last';
 
 	/**
 	 * Get the rule label.
@@ -24,14 +24,14 @@ class PostalCode extends Field {
 	 * @return string
 	 */
 	public function get_label(): string {
-		return esc_html__( 'Checkout Postal Code', 'arraypress' );
+		return esc_html__( 'Checkout Last Name', 'arraypress' );
 	}
 
 	/**
 	 * Get the name of the field for placeholders/tooltips.
 	 */
 	protected function get_field_name(): string {
-		return esc_html__( 'postal code', 'arraypress' );
+		return esc_html__( 'last name', 'arraypress' );
 	}
 
 }

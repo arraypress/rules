@@ -22,7 +22,7 @@ use function esc_html__;
 /**
  * The User Registration Date rule.
  */
-class Registration extends Date {
+class Registered extends Date {
 
 	/**
 	 * Get the rule label.

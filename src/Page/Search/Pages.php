@@ -20,14 +20,4 @@ class Pages extends Page {
 		return esc_html__( 'Pages', 'arraypress' );
 	}
 
-
-	/**
-	 * Get the rule group.
-	 *
-	 * @return string
-	 */
-	public function get_option_group(): string {
-		return esc_html__( 'Page', 'arraypress' );
-	}
-
 }

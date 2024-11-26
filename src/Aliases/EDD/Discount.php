@@ -2,8 +2,8 @@
 declare( strict_types=1 );
 
 // Field
-class_alias( '\ArrayPress\Rules\EDD\Discount\Field\Rate', '\ArrayPress\Rules\EDD\DiscountRate' );
+class_alias( '\ArrayPress\Rules\EDD\Discount\Field\Rate', '\Rules\EDD\DiscountRate' );
 
 // Search
-class_alias( '\ArrayPress\Rules\EDD\Discount\Search\Discount', '\ArrayPress\Rules\EDD\Discount' );
-class_alias( '\ArrayPress\Rules\EDD\Discount\Search\Discounts', '\ArrayPress\Rules\EDD\Discounts' );
+class_alias( '\ArrayPress\Rules\EDD\Discount\Search\Discount', '\Rules\EDD\Discount' );
+class_alias( '\ArrayPress\Rules\EDD\Discount\Search\Discounts', '\Rules\EDD\Discounts' );

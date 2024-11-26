@@ -46,7 +46,7 @@ class FeeTotal extends Decimal {
 	 * @return bool
 	 */
 	public function validate( array $args ): bool {
-		return function_exists( 'EDD' );
+		return function_exists( 'edd_get_cart_fee_total' );
 	}
 
 	/**

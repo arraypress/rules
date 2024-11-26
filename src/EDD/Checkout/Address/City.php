@@ -16,7 +16,7 @@ class City extends Field {
 	 *
 	 * @var string
 	 */
-	protected string $field_key = 'edd_city';
+	protected string $field_key = 'card_city';
 
 	/**
 	 * Get the rule label.
